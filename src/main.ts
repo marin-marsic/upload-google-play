@@ -28,7 +28,7 @@ export async function run() {
             ?.split(',')
             ?.filter(x => x !== '')
             ?.map(x => parseInt(x))
-            ?.filter(x => !Number.isNaN(x));
+            ?.filter(x => Number.isNaN(x));
 
         await validateServiceAccountJson(serviceAccountJsonRaw, serviceAccountJson)
 
